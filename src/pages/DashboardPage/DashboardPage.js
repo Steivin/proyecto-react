@@ -1,8 +1,30 @@
 import '../DashboardPage/DashboardPage.css';
 import React from 'react';
+//import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../firebase';
+import { useNavigate } from 'react-router-dom';
+// import { useState } from 'react';
 // import { Link } from 'react-router-dom';
 
 function DasboardPage() {
+    const navigate = useNavigate();
+    //const [user] = useAuthState(auth);
+
+    // funcion para cerrar sesion en Firebase
+    const handleLogout = async () => {
+        try {
+            await signOut(auth);
+            navigate('/');
+        } catch (error) {
+            console.error("Error al cerrar sesion: ", error);
+            //sweetAlert opcional
+        }
+    };
+    
+    
+    
+    
     return (
         <>
             <header>
@@ -27,7 +49,7 @@ function DasboardPage() {
                             </ul>
                             <form class="d-flex">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                <button class="btn btn-outline-success" type="submit">Search</button>
+                                <button class="btn btn-outline-success" type="button" onClick={handleLogout}>Logout</button>
                             </form>
                         </div>
                     </div>
