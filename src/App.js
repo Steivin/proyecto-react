@@ -30,6 +30,7 @@ import RegisterPage from './pages/RegisterPage/RegisterPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage/ForgotPasswordPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
 import NotFoundPage from  './pages/Components/NotFoundPage';
+import UsersPage from './pages/UsersPage/UsersPage';
 // Importar los hooks
 import Usestate from './pages/Playground/useState';
 import Useffect from './pages/Playground/useEffect';
@@ -51,6 +52,7 @@ function App() {
 
         {/*               Rutas privadas           */}
         <Route path="/dashboard" element={<ProtectedRoute> <DashboardPage /> </ProtectedRoute>}/>
+        <Route path="/users" element={<ProtectedRoute> <UsersPage /> </ProtectedRoute>}/>
 
         {/* Ruta genérica para páginas no encontradas */}
         <Route path="*" element={<NotFoundPage />} />

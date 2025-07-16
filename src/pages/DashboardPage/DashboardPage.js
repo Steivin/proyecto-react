@@ -41,7 +41,7 @@ function DasboardPage() {
                                     <a class="navbar-brand" href="/dashboard">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="navbar-brand" href="/dashboard">Link</a>
+                                    <a class="navbar-brand" href="/users">Users</a>
                                 </li>
                                 <li class="nav-item">
                                     <button class="nav-link disabled" type="button" tabIndex="-1" aria-disabled="true" style={{ background: "none", border: "none", padding: 0 }}>Disabled</button>
