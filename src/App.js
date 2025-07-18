@@ -31,6 +31,7 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage/ForgotPasswordPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
 import NotFoundPage from  './pages/Components/NotFoundPage';
 import UsersPage from './pages/UsersPage/UsersPage';
+import ResetPasswordPage from './pages/ResetPasswordPage/ResetPasswordPage';
 // Importar los hooks
 import Usestate from './pages/Playground/useState';
 import Useffect from './pages/Playground/useEffect';
@@ -49,6 +50,7 @@ function App() {
         <Route path="/" element={<LoginPage/>}/>
         <Route path="/register" element={<RegisterPage/>}/>
         <Route path="/forgot" element={<ForgotPasswordPage/>}/>
+        <Route path="/reset" element={<ResetPasswordPage/>}/>
 
         {/*               Rutas privadas           */}
         <Route path="/dashboard" element={<ProtectedRoute> <DashboardPage /> </ProtectedRoute>}/>
